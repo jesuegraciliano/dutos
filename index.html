@@ -7,16 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="logo-topo">
-  <img src="logoifsc.png" alt="Logotipo do IFSC" class="logo" />
-</div>
-
   <div class="container">
+    
+    <!-- Logotipo do IFSC centralizado -->
+    <div class="logo-topo">
+      <img src="logoifsc.png" alt="Logotipo do IFSC" class="logo" />
+    </div>
+
+    <!-- Título -->
     <h1>Calculadora de Dutos Retangulares</h1>
     <p class="description">
       Insira os dados em verde para calcular dimensões do duto e área de chapas.
     </p>
 
+    <!-- Tabela de parâmetros -->
     <table class="duct-table">
       <thead>
         <tr>
@@ -26,10 +30,10 @@
         </tr>
       </thead>
       <tbody>
-        <!-- ENTRADAS -->
+        <!-- Entradas -->
         <tr>
           <td>Vazão do equipamento</td>
-          <td><input type="number" id="vazao" placeholder="3400" /></td>
+          <td><input type="number" id="vazao" placeholder="5100" /></td>
           <td>m³/h</td>
         </tr>
         <tr>
@@ -44,42 +48,42 @@
         </tr>
         <tr>
           <td>Comprimento do duto</td>
-          <td><input type="number" id="comprimento" placeholder="10" step="0.1" /></td>
+          <td><input type="number" id="comprimento" placeholder="20" step="0.1" /></td>
           <td>m</td>
         </tr>
 
-        <!-- RESULTADOS -->
+        <!-- Resultados -->
         <tr class="section-row">
           <td colspan="3"><strong>CÁLCULOS</strong></td>
         </tr>
         <tr>
           <td>Área de secção</td>
-          <td id="areaSecao">0.000</td>
+          <td id="areaSecao" class="resultado">0.000</td>
           <td>m²</td>
         </tr>
         <tr>
           <td>Largura do duto</td>
-          <td id="larguraDuto">0.000</td>
+          <td id="larguraDuto" class="resultado">0.000</td>
           <td>m</td>
         </tr>
         <tr>
           <td>Área de chapas</td>
-          <td id="areaChapas">0.000</td>
+          <td id="areaChapas" class="resultado">0.000</td>
           <td>m²</td>
         </tr>
         <tr>
           <td>Massa de chapas</td>
-          <td id="massaChapas">0</td>
+          <td id="massaChapas" class="resultado">0</td>
           <td>kg</td>
         </tr>
         <tr>
           <td>Custo da mão de obra estimado</td>
-          <td id="custoMaoObra">0</td>
+          <td id="custoMaoObra" class="resultado">0</td>
           <td>R$</td>
         </tr>
         <tr>
           <td>Custo da chapa de aço estimado</td>
-          <td id="custoChapas">0</td>
+          <td id="custoChapas" class="resultado">0</td>
           <td>R$</td>
         </tr>
       </tbody>
@@ -88,7 +92,7 @@
     <button onclick="calcularDuto()">Calcular</button>
 
     <p class="note">
-      Este cálculo é uma estimativa simplificada. Para aplicações reais, consulte um técnico em HVAC.
+      Cálculo estimado com base em condições médias. Para projetos reais, consulte um Técnico de Refrigeração.
     </p>
   </div>
 
