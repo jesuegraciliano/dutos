@@ -8,8 +8,9 @@ function calcularDuto() {
   // Cálculo 1: Área de secção (m²)
   const areaSecao = (velocidade !== 0) ? (vazao / 3600) / velocidade : 0;
 
-  // Cálculo 2: Medida do duto (largura) (m)
-  const largura = (altura !== 0) ? (areaSecao / altura) : 0;
+  // Cálculo 2: Medida do duto (largura) (m), arredondada de 5 em 5 cm
+  let largura = (altura !== 0) ? (areaSecao / altura) : 0;
+  largura = Math.round(largura * 20) / 20; // Arredonda para múltiplos de 0.05 m
 
   // Cálculo 3: Área de chapas (m²)
   const areaChapas = (2 * (largura + altura) * comprimento) * 1.2;
