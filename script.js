@@ -15,8 +15,20 @@ function calcularDuto() {
   // Cálculo 3: Área de chapas (m²)
   const areaChapas = (2 * (largura + altura) * comprimento) * 1.2;
 
+  // Cálculo 4: Massa de chapas (kg)
+  const massaChapas = (areaChapas * 0.79 / 1000) * 7600;
+
+  // Cálculo 5: Custo de mão de obra (R$)
+  const custoMaoObra = 13 * massaChapas;
+
+  // Cálculo 6: Custo de chapa de aço estimado (R$)
+  const custoChapas = areaChapas * 75;
+
   // Atualiza os resultados na interface
   document.getElementById("areaSecao").textContent = areaSecao.toFixed(3);
   document.getElementById("larguraDuto").textContent = largura.toFixed(3);
   document.getElementById("areaChapas").textContent = areaChapas.toFixed(2);
+  document.getElementById("massaChapas").textContent = massaChapas.toFixed(0);
+  document.getElementById("custoMaoObra").textContent = custoMaoObra.toFixed(0);
+  document.getElementById("custoChapas").textContent = custoChapas.toFixed(0);
 }
