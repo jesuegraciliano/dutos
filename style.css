@@ -1,0 +1,99 @@
+/* Corpo e layout geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f5e9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 800px;
+  width: 100%;
+  margin: 40px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+.description,
+.note {
+  text-align: center;
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.duct-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.duct-table th,
+.duct-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.duct-table thead th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Entradas em verde */
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  background-color: #c8e6c9;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Resultados em azul */
+#areaSecao,
+#larguraDuto,
+#areaChapas {
+  background-color: #b3e5fc;
+  font-weight: bold;
+  color: #01579b;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Botão */
+button {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 24px;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
+.section-row {
+  background-color: #f9fbe7;
+  text-align: center;
+  font-weight: bold;
+  color: #33691e;
+}
