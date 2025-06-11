@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Dutos Retangulares</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Dutos Retangulares</h1>
+    <p class="description">
+      Insira os dados em verde para calcular dimensões do duto e área de chapas.
+    </p>
+
+    <table class="duct-table">
+      <thead>
+        <tr>
+          <th>Parâmetro</th>
+          <th>Valor</th>
+          <th>Unidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ENTRADAS -->
+        <tr>
+          <td>Vazão do equipamento</td>
+          <td><input type="number" id="vazao" placeholder="3400" /></td>
+          <td>m³/h</td>
+        </tr>
+        <tr>
+          <td>Velocidade do ar</td>
+          <td><input type="number" id="velocidade" placeholder="4" step="0.1" /></td>
+          <td>m/s</td>
+        </tr>
+        <tr>
+          <td>Altura do duto</td>
+          <td><input type="number" id="altura" placeholder="0.35" step="0.01" /></td>
+          <td>m</td>
+        </tr>
+        <tr>
+          <td>Comprimento do duto</td>
+          <td><input type="number" id="comprimento" placeholder="10" step="0.1" /></td>
+          <td>m</td>
+        </tr>
+
+        <!-- RESULTADOS -->
+        <tr class="section-row">
+          <td colspan="3"><strong>CÁLCULOS</strong></td>
+        </tr>
+        <tr>
+          <td>Área de secção</td>
+          <td id="areaSecao">0.000</td>
+          <td>m²</td>
+        </tr>
+        <tr>
+          <td>Largura do duto</td>
+          <td id="larguraDuto">0.000</td>
+          <td>m</td>
+        </tr>
+        <tr>
+          <td>Área de chapas</td>
+          <td id="areaChapas">0.000</td>
+          <td>m²</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button onclick="calcularDuto()">Calcular</button>
+
+    <p class="note">
+      Este cálculo é uma estimativa simplificada. Para aplicações reais, consulte um técnico em HVAC.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
